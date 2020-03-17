@@ -135,8 +135,8 @@ title = "gitleaks config"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
 	[[rules.whitelist]]
-	regex = '''(PASSWORD=\"password\"|PASSWORD_EXPIRE_DATE=.*|PASSWORD:\'admin\'|password\" value=\"password\"|guid.*\" node=\"element\")'''
-	description = "whitelist generic known findings that are not valid"
+	    regex = '''(PASSWORD = \"password\"|PASSWORD_EXPIRE_DATE = .*|PASSWORD: \'admin\'|password\" value=\"password\"|guid.*\" node=\"element\")'''
+	    description = "whitelist generic known findings that are not valid"
 
 [[rules]]
 	description = "WP-Config"
