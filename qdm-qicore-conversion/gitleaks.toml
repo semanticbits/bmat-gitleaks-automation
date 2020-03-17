@@ -147,6 +147,9 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
+	[[rules.whitelist]]
+	regex = '''(\"-Dmaven\.multiModuleProjectDirectory\=\${MAVEN\_PROJECTBASEDIR}\")'''
+	description = "whitlist CLI args caught as high entropy findings"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
