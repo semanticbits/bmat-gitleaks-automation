@@ -126,8 +126,8 @@ title = "gitleaks config"
 	description = "Env Var"
 	regex = '''(?i)(api_key|apikey|secret|password|pw)=[0-9a-zA-Z-_{}]{4,120}'''
 	[[rules.whitelist]]
-	regex = '''(PASSWORD=password)'''
-	description = "Use of password in env vars in this system has been vetted, these are all just temp placeholders and for convience of local dev since the project is open source"
+	    regex = '''(PASSWORD=password)'''
+	    description = "Use of password in env vars in this system has been vetted, these are all just temp placeholders and for convience of local dev since the project is open source"
 
 
 [[rules]]
@@ -151,8 +151,8 @@ title = "gitleaks config"
         "5.0-5.6"
 	]
 	[[rules.whitelist]]
-	regex = '''(\"-Dmaven\.multiModuleProjectDirectory\=\${MAVEN\_PROJECTBASEDIR}\")'''
-	description = "whitlist CLI args caught as high entropy findings"
+	    regex = '''(\"-Dmaven\.multiModuleProjectDirectory\=\${MAVEN\_PROJECTBASEDIR}\")'''
+	    description = "whitlist CLI args caught as high entropy findings"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
