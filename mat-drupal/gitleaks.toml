@@ -131,9 +131,6 @@ title = "gitleaks config"
 	description = "Generic Credential"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
-	[[rules.whitelist]]
-	    description = "Whitelist example env var"
-	    regex = '''(password' =\\u003e getenv\('MYSQL_PASSWORD')'''
 
 [[rules]]
 	description = "WP-Config"
@@ -160,4 +157,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-        file = '''(core\.entity_view_display\.user\.user\.compact\.yml|core\.entity_view_mode\.taxonomy_term\.full\.yml|webform\.webform_options\.likert_agreement\.yml|textfields\.twig|demo\.css|demo\.htm|package-lock\.json|gitleaks\.toml)'''
+        file = '''(\.env\.example|core\.entity_view_display\.user\.user\.compact\.yml|core\.entity_view_mode\.taxonomy_term\.full\.yml|webform\.webform_options\.likert_agreement\.yml|textfields\.twig|demo\.css|demo\.htm|package-lock\.json|gitleaks\.toml)'''
