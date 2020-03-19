@@ -157,4 +157,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-        file = '''(demo\.css|demo\.htm|package-lock\.json|gitleaks\.toml)'''
+        file = '''(core\.entity_view_display\.user\user\.compact\.yml|core\.entity_view_mode\.taxonomy_term\.full\.yml|webform\.webform_options\.likert_agreement\.yml|textfields\.twig|demo\.css|demo\.htm|package-lock\.json|gitleaks\.toml)'''
