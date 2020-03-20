@@ -131,6 +131,9 @@ title = "gitleaks config"
 	description = "Generic Credential"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
+	[[rules.whitelist]]
+	    description = "Whiteslist valid env var reference"
+	    regex = '''(.*getenv\('MYSQL_PASSWORD')'''
 
 [[rules]]
 	description = "WP-Config"
@@ -144,6 +147,9 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
+	[[rules.whitelist]]
+	    description = "Whitelist known good pem string that is a server path not an actual pem"
+	    regex = '''('\/var\/www\/html\/sites\/default\/rds-combined-ca-bundle\.pem')'''
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
@@ -157,4 +163,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-        file = '''(\.env\.example|core\.entity_view_display\.user\.user\.compact\.yml|core\.entity_view_mode\.taxonomy_term\.full\.yml|webform\.webform_options\.likert_agreement\.yml|textfields\.twig|demo\.css|demo\.htm|package-lock\.json|gitleaks\.toml)'''
+        file = '''(style\.css\.map|mobile-nav\.js\.map|main-menu\.js\.map|accordion-item\.js\.map|\.env\.example|core\.entity_view_display\.user\.user\.compact\.yml|core\.entity_view_mode\.taxonomy_term\.full\.yml|webform\.webform_options\.likert_agreement\.yml|textfields\.twig|demo\.css|demo\.htm|package-lock\.json|gitleaks\.toml)'''
