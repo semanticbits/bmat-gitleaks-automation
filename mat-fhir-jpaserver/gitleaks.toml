@@ -126,8 +126,8 @@ title = "gitleaks config"
 	description = "Env Var"
 	regex = '''(?i)(api_key|apikey|secret|password|pw)=[0-9a-zA-Z-_{}]{4,120}'''
 	[[rules.whitelist]]
-	    regex = '''(REDACTED)'''
-	    description = "Ignore the REDACTED keyword, this is something that is inherently already redacted and does not need an alert"
+	    regex = '''(password\=hapiDbPass)'''
+	    description = "Ignore default open config password, this is set via env vars at run time per environment and is a placeholder"
 
 
 
@@ -136,8 +136,8 @@ title = "gitleaks config"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
 	[[rules.whitelist]]
-	    regex = '''(REDACTED)'''
-	    description = "Ignore the REDACTED keyword, this is something that is inherently already redacted and does not need an alert"
+	    regex = '''(DbUser'@'localhost')'''
+	    description = "Ignore username finding false positive"
 
 
 [[rules]]
