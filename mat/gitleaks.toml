@@ -147,6 +147,9 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
+	[[rules.whitelist]]
+	    regex = '''(AdvancedIllnessandFrailtyExclusion-FHIR4-4-0-000)'''
+	    description = "Whitelist false positive entropy from SQL data"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
