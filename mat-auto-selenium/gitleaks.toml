@@ -133,7 +133,7 @@ title = "gitleaks config"
 	description = "Generic Credential"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
-	[[rules.whiteslist]]
+	[[rules.whitelist]]
 	    description = "Generic credential false positive white list"
 	    regex = '''(Password,.*|guid,.*|.*guidanceInput_TextAreaWithMaxLength.*|Guidance.*)'''
 
