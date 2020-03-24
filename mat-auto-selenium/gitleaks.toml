@@ -135,7 +135,7 @@ title = "gitleaks config"
 	tags = ["key", "API", "generic"]
 	[[rules.whiteslist]]
 	    description = "Generic credential false positive white list"
-	    regex = '''(Password, Pwd1, "Password"|guid, \"GUID\"|Guidance = By\.id\("guidanceInput_TextAreaWithMaxLength"|Guidance "Text")'''
+	    regex = '''(Password,.*|guid,.*|.*guidanceInput_TextAreaWithMaxLength.*|Guidance.*)'''
 
 [[rules]]
 	description = "WP-Config"
