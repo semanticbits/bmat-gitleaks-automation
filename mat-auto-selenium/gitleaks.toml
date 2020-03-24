@@ -148,6 +148,9 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
+	[[rules.whitelist]]
+	    description = "Entropy whitelist for known false positives"
+	    regex = '''('CQLStandaloneWorkSpaceView\.containerPanel'|'SearchFilterWidget_HorizontalPanel_forMeasure'|'SearchFilterWidget_SearchInputHPanel_forMeasure'|'SearchFilterWidget_SearchInputHPanel_forCqlLibrary'|'CQLPopulationWorkspaceView.containerPanel')'''
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
