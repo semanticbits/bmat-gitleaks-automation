@@ -155,4 +155,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-	file = '''(FHIRHelpers=.*\.xml|AssemblyInfo\.cs|build\.gradle|elm\.xmi|fhir-.*\.xml|.*\.xsd|gitleaks\.toml)$'''
+	file = '''(FHIRHelpers-.*\.xml|AssemblyInfo\.cs|build\.gradle|elm\.xmi|fhir-.*\.xml|.*\.xsd|gitleaks\.toml)$'''
