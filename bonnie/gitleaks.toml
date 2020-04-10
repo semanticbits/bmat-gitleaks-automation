@@ -125,6 +125,9 @@ title = "gitleaks config"
 [[rules]]
 	description = "Env Var"
 	regex = '''(?i)(api_key|apikey|secret|password|pw)=[0-9a-zA-Z-_{}]{4,120}'''
+	[[rules.whitelist]]
+	    regex = '''(secret=3d4a47c7e927d75da)'''
+	    description = "Ignore sample secret in example output, this is not real"
 
 
 [[rules]]
@@ -132,8 +135,11 @@ title = "gitleaks config"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
 	[[rules.whitelist]]
-	regex = '''(input type=.*)'''
-	description = "Ignore input type HTML syntax as it triggers on false positive keywords"
+	    regex = '''(input type=.*)'''
+	    description = "Ignore input type HTML syntax as it triggers on false positive keywords"
+	[[rules.whitelist]]
+	    regex = '''(secret_key_base:.*|secret: \'Secret\')'''
+	    description = "Ignore secret_key_base params these are allowed to be in the repo for dev and test, also ignore secret: Secret finding this is a false positive."
 
 
 [[rules]]
