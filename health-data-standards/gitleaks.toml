@@ -135,6 +135,7 @@ title = "gitleaks config"
 	    description = "Whitelist stub request syntax"
 		regex = '''(stub\_request\(.*\))'''
 
+
 [[rules]]
 	description = "WP-Config"
 	regex='''define(.{0,20})?(DB_CHARSET|NONCE_SALT|LOGGED_IN_SALT|AUTH_SALT|NONCE_KEY|DB_HOST|DB_PASSWORD|AUTH_KEY|SECURE_AUTH_KEY|LOGGED_IN_KEY|DB_NAME|DB_USER)(.{0,20})?['|"].{10,120}['|"]'''
@@ -147,6 +148,12 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
+	[[rules.whitelist]]
+	    description = "Whitelist check data call syntax"
+		regex = '''(check\_data\_criteria\(.*\))'''
+	[[rules.whitelist]]
+	    description = "Whitelist full high entropy id syntax"
+		regex = '''(Fulfills\_.*\_.*\_.*\_.*\_.*)'''
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
@@ -160,4 +167,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-        file = '''(.*\.sch|test\/.*\.json|test\/.*\.xml|gitleaks\.toml)'''
+        file = '''(test\/unit\/hqmf\/parser_test.rb|lib\/health-data-standards\/tasks\/bundle.rake|.*\.sch|test\/.*\.json|test\/.*\.xml|gitleaks\.toml)'''
