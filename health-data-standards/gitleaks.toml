@@ -144,9 +144,6 @@ title = "gitleaks config"
 	entropies = [
         "5.0-5.6"
 	]
-	[[rules.whitelist]]
-	    description = "Whitelist known good pem string that is a server path not an actual pem"
-	    regex = '''('\/var\/www\/html\/sites\/default\/rds-combined-ca-bundle\.pem')'''
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
@@ -160,4 +157,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-        file = '''(gitleaks\.toml)'''
+        file = '''(.*\.sch|test\/.*\.json|test\/.*\.xml|gitleaks\.toml)'''
