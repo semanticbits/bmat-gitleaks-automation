@@ -155,4 +155,4 @@ title = "gitleaks config"
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-	file = '''(test\/unit\/hqmf\/2.0\/fulfills_test\.rb|test/vcr_setup\.rb|test\/unit\/vsac\/vsac.*\.rb|test\/unit\/measure-loader\/value_set_loader_test\.rb|test\/unit\/measure-loader\/elm_parser_test\.rb||test\/unit\/hqmf\/parser_test\.rb|test\/unit\/hqmf\/1.0\/nqf.*\.rb|test\/test_helper\.rb|test\/fixtures\/vcr_cassettes\/vsac_auth_bad_credentials\.yml|test\/fixtures\/vcr_cassettes\/measure.*\.yml|test\/fixtures\/2\.1\/measures\/.*\.xml|test\/fixtures\/hqmf\/hqmf\/.*\.xml|gitleaks\.toml)$'''
+	file = '''(test\/unit\/hqmf\/2\.0\/fulfills_test\.rb|test/vcr_setup\.rb|test\/unit\/vsac\/vsac.*\.rb|test\/unit\/measure-loader\/value_set_loader_test\.rb|test\/unit\/measure-loader\/elm_parser_test\.rb||test\/unit\/hqmf\/parser_test\.rb|test\/unit\/hqmf\/1.0\/nqf.*\.rb|test\/test_helper\.rb|test\/fixtures\/vcr_cassettes\/vsac_auth_bad_credentials\.yml|test\/fixtures\/vcr_cassettes\/measure.*\.yml|test\/fixtures\/2\.1\/measures\/.*\.xml|test\/fixtures\/hqmf\/hqmf\/.*\.xml|gitleaks\.toml)$'''
