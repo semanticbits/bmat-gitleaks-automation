@@ -157,6 +157,9 @@ title = "gitleaks config"
 	[[rules.whitelist]]
 	    regex = '''(\"-Dmaven\.multiModuleProjectDirectory\=\${MAVEN\_PROJECTBASEDIR}\")'''
 	    description = "whitlist CLI args caught as high entropy findings"
+	[[rules.whitelist]]
+	    regex = '''(assertEquals\(HAPI_BASE.*\))'''
+            description = "whitlist assertion statement that triggers high entropy"
 
 [[rules]]
 	description = "Entropy plus Generic Credential"
