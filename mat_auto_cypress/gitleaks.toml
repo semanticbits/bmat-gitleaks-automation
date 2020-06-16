@@ -158,10 +158,11 @@ title = "gitleaks config"
 	    Min = "5.2"
 		Max = "5.5"
 
-[Global]
-    file = '''(?i)(id_rsa|passwd|pgpass|pem|shadow)'''
+[[rules]]
+    description = "Files with keys and credentials"
+    fileNameRegex = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-	file = '''(package\.json|cypress\/support\/oktaLogin\.js|cypress\/support\/OKTA_LOGIN\.js|mochawesome.*\.json|app\.js|package-lock\.json|gitleaks\.toml)$'''
+	files = ['''(package\.json|cypress\/support\/oktaLogin\.js|cypress\/support\/OKTA_LOGIN\.js|mochawesome.*\.json|app\.js|package-lock\.json|gitleaks\.toml)$''']
 
