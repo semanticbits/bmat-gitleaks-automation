@@ -131,9 +131,13 @@ title = "gitleaks config"
 	description = "Generic Credential"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
+	#Old Rules
+	#[[rules.whitelist]]
+            #description = "Remove generic findings related to cypress env vars and guidance keyword"
+	    #regex = '''(guidance = \'guidance\'|pw = Cypress\.env.*|password = Cypress\.env.*)'''
 	[[rules.whitelist]]
-            description = "Remove generic findings related to cypress env vars and guidance keyword"
-	    regex = '''(guidance = \'guidance\'|pw = Cypress\.env.*|password = Cypress\.env.*)'''
+            description = "Remove generic findings related to cypress env vars"
+	    regex = '''(guidance = \'guidance\'| * = Cypress\.env.*)'''
 
 [[rules]]
 	description = "WP-Config"
