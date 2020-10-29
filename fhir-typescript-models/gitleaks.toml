@@ -262,7 +262,7 @@ title = "gitleaks config"
     fileNameRegex = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
 
 [whitelist]
-    description = "image whitelists"
-    files = ['''(.*?)(jpg|gif|doc|pdf|bin|swagger_generator.rb|sonar.properties|sonar-project.properties|build.sbt|sonar-project-benelevel-eligibility-filter.properties)$''']
+    description = "image whitelists, added files with pem in the name"
+    files = ['''(.*?)(jpg|gif|doc|pdf|bin|swagger_generator.rb|sonar.properties|sonar-project.properties|build.sbt|sonar-project-benelevel-eligibility-filter.properties|SubstanceSpecificationStructureIsotopeMolecularWeight.ts|StructureMapGroupTypeMode.ts)$''']
 
 
