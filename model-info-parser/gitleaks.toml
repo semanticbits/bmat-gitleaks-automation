@@ -142,18 +142,18 @@ title = "gitleaks config"
 	[[rules.Entropies]]
 	    Min = "5.0"
 		Max = "5.6"
-		
+
 [[rules]]
 	description = "Entropy plus Generic Credential"
 	regex = '''(?i)(api_key|apikey|secret|key|api|password|pw)'''
 	[[rules.Entropies]]
 	    Min = "5.2"
 		Max = "5.5"
-		
+
 [[rules]]
     description = "Files with keys and credentials"
     fileNameRegex = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
 
 [whitelist]
 	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
-	files = ['''(fhir-modelinfo-.*\.xml|package-lock\.json|gitleaks\.toml)$''']
+	files = ['''(fhir-modelinfo-.*\.xml|package-lock\.json|gitleaks\.toml|allTypeMappingsTemplate\.ts)$''']
