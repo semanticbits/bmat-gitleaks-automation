@@ -143,7 +143,7 @@ title = "gitleaks config"
     [[rules.whitelist]]
         regex='''.*os\.getenv.*|.*key=os\.environ\.get'''
 
-    
+
     [[rules.whitelist]]
         regex='''.*(?i)(s3secretkey|ENV_VAR|test_token|test\/key|testkey|Bearer|key.pem|key-specification|hadoop.*|Key=None|HOST=minio|KEY=S3AccessKey|api_url(),data.*|key=_file_mmset_sort_key)'''
 #[[rules]]
@@ -180,7 +180,7 @@ title = "gitleaks config"
         regex = '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'''
     [[rules.whitelist]]
         regex='''(dns_secret_key|dns_access_key)'''
-        description = "Ignore credstash secrets in Terraform files"        
+        description = "Ignore credstash secrets in Terraform files"
 
     [[rules.whitelist]]
         regex='''(linkKey)'''
@@ -210,7 +210,7 @@ title = "gitleaks config"
         regex='''KEY \=.*'''
         description = "Delta deleter script, can ignore"
         file = '''(claims-api-submitter/deletion/delta_deleter.py)'''
-       
+
     [[rules.whitelist]]
         regex = '''secret=os.getenv\(\"AWS_SECRET_ACCESS_KEY\"'''
         description = "claims deleter key reference"
@@ -218,7 +218,7 @@ title = "gitleaks config"
 
    [[rules.whitelist]]
         regex = '''key\": \"testkey\"'''
-        
+
     [[rules.whitelist]]
        regex='''.*os\.getenv.*'''
 
@@ -241,7 +241,7 @@ title = "gitleaks config"
             description = "ignore public ssh key and pems"
             file = '''(pem|ppk|env)$'''
             path = '''(.*)?ssh'''
-   
+
 
 [[rules]]
     description = "Potential bash var"
@@ -263,6 +263,4 @@ title = "gitleaks config"
 
 [whitelist]
     description = "image whitelists, added files with pem in the name"
-    files = ['''(.*?)(jpg|gif|doc|pdf|bin|swagger_generator.rb|sonar.properties|sonar-project.properties|build.sbt|sonar-project-benelevel-eligibility-filter.properties|SubstanceSpecificationStructureIsotopeMolecularWeight.ts|StructureMapGroupTypeMode.ts)$''']
-
-
+    files = ['''(.*?)(jpg|gif|doc|pdf|bin|swagger_generator.rb|sonar.properties|sonar-project.properties|build.sbt|sonar-project-benelevel-eligibility-filter.properties|SubstanceSpecificationStructureIsotopeMolecularWeight.ts|StructureMapGroupTypeMode.ts|TypeMapping.ts)$''']
