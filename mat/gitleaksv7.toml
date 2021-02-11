@@ -132,7 +132,7 @@ title = "gitleaks config"
 	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
 	tags = ["key", "API", "generic"]
 	[rules.allowlist]
-	    regex = '''(.*passwordLabel.*|.*Password\(\).*|.*guidLabel.*|.*guidTextBox.*|.*(P|p)assword\..*|.*passwordPanel.*|.*\"Password\",\"ChangePassword\".*|.*Pwdlabel.*|.*(guidance|GUIDANCE).*|.*PasswordRoot\.get.*|.*password\(.*\).*|.*password = \"HCIs0001\"|.*guid\" node=\"element\".*|password_PasswordTextBox| API_KEY = "API-KEY")'''
+	    regex = '''(.*passwordLabel.*|.*Password\(\).*|.*guidLabel.*|.*guidTextBox.*|.*(P|p)assword\..*|.*passwordPanel.*|.*\"Password\",\"ChangePassword\".*|.*Pwdlabel.*|.*(guidance|GUIDANCE).*|.*PasswordRoot\.get.*|.*password\(.*\).*|.*password = \"HCIs0001\"|.*guid\" node=\"element\".*|.*password_PasswordTextBox.*|.*API_KEY = "API-KEY".*)'''
 	    description = "allowlists various Password classes/objects and other false positives as a baseline"
 
 [[rules]]
