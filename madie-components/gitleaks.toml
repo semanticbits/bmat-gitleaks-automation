@@ -193,5 +193,5 @@ title = "gitleaks config"
 	description = "image allowlists"
 	files = [
 	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
-	'''(package-lock\.json)'''
+	'''(package-lock\.json)|(package\.json)'''
 	]
