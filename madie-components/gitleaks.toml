@@ -144,7 +144,7 @@ title = "gitleaks config"
 	tags = ["email"]
 	[rules.allowlist]
 		files = ['''(?i)bashrc''']
-		regexes = ['''you@example.com''']
+		regexes = ['''you@example.com|test@mail.com''']
 		description = "ignore bashrc or example emails"
 
 
