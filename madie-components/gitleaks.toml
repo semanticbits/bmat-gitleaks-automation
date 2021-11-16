@@ -124,10 +124,7 @@ title = "gitleaks config"
 
 [[rules]]
 	description = "Env Var"
-	regex = '''(?i)(apikey|secret|key|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
-	[rules.allowlist]
-		regexes = ['''key={index}|key={label}''']
-		description = "ignore key index "
+	regex = '''(?i)(apikey|secret|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
 
 [[rules]]
 	description = "Port"
@@ -144,13 +141,12 @@ title = "gitleaks config"
 	tags = ["email"]
 	[rules.allowlist]
 		files = ['''(?i)bashrc''']
-		regexes = ['''you@example.com|test@mail.com''']
-		description = "ignore bashrc or example emails"
+		description = "ignore bashrc emails"
 
 
 [[rules]]
 	description = "Generic Credential"
-	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|key|api|password|user|guid|hostname|pw|auth)(.{0,20})?['|"]([0-9a-zA-Z-_\/+!{}/=]{4,120})['|"]'''
+	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|api|password|user|guid|hostname|pw|auth)(.{0,20})?['|"]([0-9a-zA-Z-_\/+!{}/=]{4,120})['|"]'''
 	tags = ["key", "API", "generic"]
 	# ignore leaks with specific identifiers like slack and aws
 	[rules.allowlist]
@@ -197,5 +193,5 @@ title = "gitleaks config"
 	description = "image allowlists"
 	files = [
 	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
-	'''(package-lock\.json)|(package\.json)'''
+	'''(package-lock\.json)'''
 	]
