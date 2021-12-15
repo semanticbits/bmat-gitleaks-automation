@@ -193,5 +193,6 @@ title = "gitleaks config"
 	description = "image allowlists"
 	files = [
 	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
-	'''(package-lock\.json)|(package\.json)'''
+	'''(package-lock\.json)|(package\.json)''',
+	'''DuplicateKeyException.java''',
 	]
