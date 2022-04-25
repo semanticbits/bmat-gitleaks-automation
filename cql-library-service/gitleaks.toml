@@ -194,5 +194,6 @@ title = "gitleaks config"
 	files = [
 	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
 	'''(package-lock\.json)''',
-	'''(useOktaTokens.test.ts)'''
+	'''(useOktaTokens.test.ts)''',
+	'''(CqlLibraryControllerMvcTest.java)'''
 	]
