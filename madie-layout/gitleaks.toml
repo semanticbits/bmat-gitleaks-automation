@@ -192,6 +192,7 @@ title = "gitleaks config"
 # Global allowlist
 [allowlist]
 	description = "image allowlists"
+	regexes = ['''#nosec''']
 	files = [
 	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
 	'''(package-lock\.json)'''
