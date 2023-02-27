@@ -126,14 +126,6 @@ title = "gitleaks config"
 	description = "Env Var"
 	regex = '''(?i)(apikey|secret|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
 
-[[rules]]
-	description = "Port"
-	regex = '''(?i)port(.{0,4})?[0-9]{1,10}'''
-	[rules.allowlist]
-		regexes = ['''(?i)port ''']
-		description = "ignore export "
-
-
 
 [[rules]]
 	description = "Email"
