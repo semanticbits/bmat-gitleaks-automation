@@ -145,7 +145,8 @@ title = "gitleaks config"
 		'''sharedUser@gmail.com''',
 		'''validuser@gmail.com''',
 		'''invalidUser@gmail.com''',
-		'''unAuthorizedUser@gmail.com'''
+		'''unAuthorizedUser@gmail.com''',
+		'''validUser@gmail.com'''
 		]
 		description = "ignore bashrc emails"
 
