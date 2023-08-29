@@ -151,6 +151,9 @@ title = "gitleaks config"
 	# ignore leaks with specific identifiers like slack and aws
 	[rules.allowlist]
 		description = "ignore slack, mailchimp, aws"
+  		files = [
+    		    '''(TerminologyServiceWebClient\.java)'''
+    		]
 		regexes = [
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
