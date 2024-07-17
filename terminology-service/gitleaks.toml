@@ -152,14 +152,15 @@ title = "gitleaks config"
 	[rules.allowlist]
 		description = "ignore slack, mailchimp, aws"
   		files = [
-    		    '''(TerminologyServiceWebClient\.java)'''
+    		    '''(TerminologyServiceWebClient\.java)''',
+	  	    '''(FhirTerminologyService\.java)'''
     		]
 		regexes = [
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
-				'''(webpack-pwa-manifest)|(WebpackPwaManifest)''',
-    				'''test-api-key'''
+                    '''(webpack-pwa-manifest)|(WebpackPwaManifest)''',
+		    '''test-api-key'''
 		]
 
 [[rules]]
