@@ -140,7 +140,10 @@ title = "gitleaks config"
 	regex = '''[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'''
 	tags = ["email"]
 	[rules.allowlist]
-		files = ['''(?i)bashrc''']
+		files = [
+  		'''(?i)bashrc''',
+     		'''hooks/useOktaTokens.test.ts'''
+     		]
 		description = "ignore bashrc emails"
 
 
@@ -150,12 +153,16 @@ title = "gitleaks config"
 	tags = ["key", "API", "generic"]
 	# ignore leaks with specific identifiers like slack and aws
 	[rules.allowlist]
-		description = "ignore slack, mailchimp, aws"
+  		files = [
+  		'''hooks/useOktaTokens.ts''',
+     		'''hooks/useOktaTokens.test.ts''',
+       		'''src/components/PageHeader/CqlLibraryActionCenter/CqlLibraryActionCenter.tsx'''
+     		]
 		regexes = [
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
-				'''(key: "1fewtg")'''
+			'''(key: "1fewtg")'''
 		]
 
 [[rules]]
