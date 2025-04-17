@@ -151,11 +151,12 @@ title = "gitleaks config"
 	# ignore leaks with specific identifiers like slack and aws
 	[rules.allowlist]
 		description = "ignore slack, mailchimp, aws"
+  		commits = [ "d679e3a75f64bfcfcf4d2019d4f125fbbe900d9c"]
 		regexes = [
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
-			'''(author =)'''
+		    '''(author =)'''
 		]
 
 [[rules]]
