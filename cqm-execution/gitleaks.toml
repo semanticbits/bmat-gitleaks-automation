@@ -1,7 +1,7 @@
 title = "gitleaks config"
 
 [[rules]]
-	description = "AWS Manager ID"
+	description = "AWS Access Key"
 	regex = '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'''
 	tags = ["key", "AWS"]
 
@@ -124,12 +124,65 @@ title = "gitleaks config"
 
 [[rules]]
 	description = "Env Var"
-	regex = '''(?i)(api_key|apikey|secret|password|pw)=[0-9a-zA-Z-_{}]{4,120}'''
+	regex = '''(?i)(apikey|secret|api|password|pass|pw|host)=[0-9a-zA-Z-_.{}]{4,120}'''
+
+[[rules]]
+	description = "Port"
+	regex = '''(?i)port(.{0,4})?[0-9]{1,10}'''
+	[rules.allowlist]
+		regexes = ['''(?i)port ''']
+		description = "ignore export "
+
+
+
+[[rules]]
+	description = "Email"
+	regex = '''[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'''
+	tags = ["email"]
+	[rules.allowlist]
+		files = [
+  		'''(?i)bashrc''',
+     		'''(useOktaTokens\.test\.ts)'''
+     		]
+		description = "ignore bashrc emails"
+
 
 [[rules]]
 	description = "Generic Credential"
-	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|password|guid|pw)(.{0,20})?['|"][0-9a-zA-Z-_!{}/=]{4,120}['|"]'''
+	regex = '''(?i)(dbpasswd|dbuser|dbname|dbhost|api_key|apikey|secret|key|api|password|user|guid|hostname|pw|auth)(.{0,20})?['|"]([0-9a-zA-Z-_\/+!{}/=]{4,120})['|"]'''
 	tags = ["key", "API", "generic"]
+	# ignore leaks with specific identifiers like slack and aws
+	[rules.allowlist]
+  		files = [
+     		]
+		regexes = [
+		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
+		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
+		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
+			'''(key: "1fewtg")'''
+		]
+
+[[rules]]
+	description = "High Entropy"
+	regex = '''[0-9a-zA-Z-_!{}/=]{4,120}'''
+  	file = '''(?i)(dump.sql|high-entropy-misc.txt)$'''
+	tags = ["entropy"]
+    [[rules.Entropies]]
+        Min = "4.3"
+        Max = "7.0"
+    [rules.allowlist]
+        description = "ignore ssh key and pems"
+        files = ['''(pem|ppk|env)$''']
+        paths = ['''(.*)?ssh''']
+
+[[rules]]
+	description = "Potential bash var"
+	regex='''(?i)(=)([0-9a-zA-Z-_!{}=]{4,120})'''
+	tags = ["key", "bash", "API", "generic"]
+        [[rules.Entropies]]
+            Min = "3.5"
+            Max = "4.5"
+            Group = "1"
 
 [[rules]]
 	description = "WP-Config"
@@ -137,27 +190,16 @@ title = "gitleaks config"
 	tags = ["key", "API", "generic"]
 
 [[rules]]
-	description = "Pure Entropy"
-	regex = '''['|"][0-9a-zA-Z-._{}$\/=]{40,120}['|"]'''
-	[[rules.Entropies]]
-	    Min = "5.0"
-		Max = "5.6"
-	[[rules.whitelist]]
-	    regex = '''(\'patients\/CMS107v6\/IPPFail_LOS=121Days\.json\')'''
-     		description = "Whitelist high entropy json file reference in README.md"
+	description = "Files with keys and credentials"
+	file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
 
-[[rules]]
-	description = "Entropy plus Generic Credential"
-	regex = '''(?i)(api_key|apikey|secret|key|api|password|pw)'''
-	[[rules.Entropies]]
-	    Min = "5.2"
-		Max = "5.5"
-
-[[rules]]
-    description = "Files with keys and credentials"
-    fileNameRegex = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
-
-[whitelist]
-	description = "Custom whitelist to exclude images and gitleaks config and any other BMAT files"
+# Global allowlist
+[allowlist]
+	description = "allowlists"
+	regexes = ['''#nosec''']
+	files = [
+	'''(.*?)(jpg|gif|doc|pdf|bin)$''',
+	'''(package-lock\.json)''',
+ 	'''(spec\/models\/calculator_spec\.js|CMS104.json|CMS108v7.json|browser.js|CMS53v7.json|spec\/helpers\/results_helpers_spec\.js|spec\/fixtures\/json\/bonnie_measures\/.*\/.*\.json||dist\/browser\.js|gitleaks\.toml)$'''
+	]
  	commits = [ "bd9573a22bcb25cdd5f3a15be1848738b633fc7e"]
-	files = ['''(spec\/models\/calculator_spec\.js|CMS104.json|CMS108v7.json|browser.js|CMS53v7.json|spec\/helpers\/results_helpers_spec\.js|spec\/fixtures\/json\/bonnie_measures\/.*\/.*\.json||dist\/browser\.js|gitleaks\.toml)$''']
