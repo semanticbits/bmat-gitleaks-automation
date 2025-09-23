@@ -143,7 +143,8 @@ title = "gitleaks config"
 		files = ['''(?i)bashrc''']
 		regexes=[
 		'''soc@hcqis.org''',
-		'''qnet_soc@cms.hhs.gov'''
+		'''qnet_soc@cms.hhs.gov''',
+		'''SOC@HCQIS.ORG'''
 		]
 		description = "ignore bashrc emails"
 
