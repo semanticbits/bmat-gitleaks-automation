@@ -141,6 +141,10 @@ title = "gitleaks config"
 	tags = ["email"]
 	[rules.allowlist]
 		files = ['''(?i)bashrc''']
+		regexes=[
+		'''soc@hcqis.org''',
+		'''qnet_soc@cms.hhs.gov'''
+		]
 		description = "ignore bashrc emails"
 
 
@@ -156,7 +160,9 @@ title = "gitleaks config"
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
 				'''(webpack-pwa-manifest)|(WebpackPwaManifest)''',
-				'''Api'''
+				'''Api''',
+				'''key''',
+				'''api-key'''
 		]
 
 [[rules]]
