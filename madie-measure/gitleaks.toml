@@ -140,7 +140,8 @@ title = "gitleaks config"
 		'''John.doe@semanticbits.com''',
 		'''testuser@example.com''',
 		'''john_doe@semanticbits.com''',
-		'''another.user@example.com'''
+		'''another.user@example.com''',
+		'''semanticbits-madie-help@icf.com'''
 		]
 		description = "ignore bashrc emails"
 
