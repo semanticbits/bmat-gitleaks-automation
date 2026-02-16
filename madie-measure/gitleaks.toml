@@ -159,7 +159,10 @@ title = "gitleaks config"
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
 			'''(?i)(SiteMapIcon|sitemap)''',
 			'''test''',
-   			'''measure-guidance'''
+   			'''measure-guidance''',
+			'''Assigner''',
+			'''Period''',
+			'''Value'''
 		]
 
 [[rules]]
