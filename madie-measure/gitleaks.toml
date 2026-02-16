@@ -162,7 +162,8 @@ title = "gitleaks config"
    			'''measure-guidance''',
 			'''Assigner''',
 			'''Period''',
-			'''Value'''
+			'''Value''',
+			'''System'''
 		]
 
 [[rules]]
