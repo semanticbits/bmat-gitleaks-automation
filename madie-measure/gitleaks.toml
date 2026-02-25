@@ -163,7 +163,8 @@ title = "gitleaks config"
 			'''Assigner''',
 			'''Period''',
 			'''Value''',
-			'''System'''
+			'''System''',
+			'''code'''
 		]
 
 [[rules]]
