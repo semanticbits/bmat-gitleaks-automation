@@ -163,7 +163,9 @@ title = "gitleaks config"
 				'''(webpack-pwa-manifest)|(WebpackPwaManifest)''',
 				'''Api''',
 				'''key''',
-				'''api-key'''
+				'''api-key''',
+				'''MADiE-User''',
+				'''MADiE-Admin'''
 		]
 
 [[rules]]
