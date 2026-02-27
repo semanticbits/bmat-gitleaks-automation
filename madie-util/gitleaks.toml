@@ -166,7 +166,7 @@ title = "gitleaks config"
 				'''api-key''',
 				'''MADiE-User''',
 				'''MADiE-Admin''',
-				'''madie-user-roles'''
+				'''STORAGE_KEY'''
 		]
 
 [[rules]]
