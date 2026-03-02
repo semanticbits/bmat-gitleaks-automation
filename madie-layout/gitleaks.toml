@@ -142,7 +142,8 @@ title = "gitleaks config"
 	[rules.allowlist]
 		files = [
   		'''(?i)bashrc''',
-     		'''(useOktaTokens\.test\.ts)'''
+     		'''(useOktaTokens\.test\.ts)''',
+			'''anotheruser@example.com'''
      		]
 		description = "ignore bashrc emails"
 
