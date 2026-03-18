@@ -161,7 +161,9 @@ title = "gitleaks config"
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
                     '''(webpack-pwa-manifest)|(WebpackPwaManifest)''',
 		    '''test-api-key''',
-			'''testKey'''
+			'''testKey''',
+			'''MADIE-ADMIN''',
+			'''TEST_USR'''
 		]
 
 [[rules]]
