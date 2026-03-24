@@ -172,7 +172,8 @@ title = "gitleaks config"
 				'''badid''',
 				'''useUserRoles''',
 				'''useRef''',
-				'''fetchUserRoles'''
+				'''fetchUserRoles''',
+				'''testUser'''
 		]
 
 [[rules]]
