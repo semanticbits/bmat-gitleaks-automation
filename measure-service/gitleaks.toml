@@ -168,7 +168,8 @@ title = "gitleaks config"
 		    '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}''',
 				'''test-api-key''',
 				'''apiKey''',
-				'''guidance'''
+				'''guidance''',
+				'''ApiPath'''
 		]
 
 [[rules]]
