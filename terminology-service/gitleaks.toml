@@ -163,7 +163,8 @@ title = "gitleaks config"
 		    '''test-api-key''',
 			'''testKey''',
 			'''MADIE-ADMIN''',
-			'''TEST_USR'''
+			'''TEST_USR''',
+			'''1.0.0'''
 		]
 
 [[rules]]
