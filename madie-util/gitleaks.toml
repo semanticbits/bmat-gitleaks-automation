@@ -173,7 +173,8 @@ title = "gitleaks config"
 				'''useUserRoles''',
 				'''useRef''',
 				'''fetchUserRoles''',
-				'''testUser'''
+				'''testUser''',
+				'''AdminUserList'''
 		]
 
 [[rules]]
