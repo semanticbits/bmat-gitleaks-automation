@@ -164,7 +164,9 @@ title = "gitleaks config"
 			'''testKey''',
 			'''MADIE-ADMIN''',
 			'''TEST_USR''',
-			'''1.0.0'''
+			'''1.0.0''',
+			'''MixedCaseUser''',
+			'''TEST_API_KEY'''
 		]
 
 [[rules]]
