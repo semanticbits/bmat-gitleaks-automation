@@ -144,7 +144,8 @@ title = "gitleaks config"
 		regexes=[
 		'''soc@hcqis.org''',
 		'''qnet_soc@cms.hhs.gov''',
-		'''SOC@HCQIS.ORG'''
+		'''SOC@HCQIS.ORG''',
+		'''user@test.com'''
 		]
 		description = "ignore bashrc emails"
 
@@ -176,7 +177,8 @@ title = "gitleaks config"
 				'''testUser''',
 				'''AdminUserList''',
 				'''user1''',
-				'''user2'''
+				'''user2''',
+				'''admin'''
 		]
 
 [[rules]]
