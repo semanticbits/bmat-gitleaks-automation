@@ -181,7 +181,7 @@ title = "gitleaks config"
 				'''user2''',
 				'''admin''',
 				'''jane_doe'''
-		]
+			]
 
 [[rules]]
 	description = "High Entropy"
