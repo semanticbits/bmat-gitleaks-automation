@@ -146,7 +146,7 @@ title = "gitleaks config"
 		'''qnet_soc@cms.hhs.gov''',
 		'''SOC@HCQIS.ORG''',
 		'''user@test.com''',
-		'''jane.doe@example.com
+		'''jane.doe@example.com'''
 		]
 		description = "ignore bashrc emails"
 
