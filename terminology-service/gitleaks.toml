@@ -167,7 +167,8 @@ title = "gitleaks config"
 			'''1.0.0''',
 			'''MixedCaseUser''',
 			'''TEST_API_KEY''',
-			'''systemVsacApiKey'''
+			'''systemVsacApiKey''',
+			'''1'''
 		]
 
 [[rules]]
