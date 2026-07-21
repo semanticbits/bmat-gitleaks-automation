@@ -180,7 +180,8 @@ title = "gitleaks config"
 				'''user1''',
 				'''user2''',
 				'''admin''',
-				'''jane_doe'''
+				'''jane_doe''',
+				'''measure-1'''
 			]
 
 [[rules]]
