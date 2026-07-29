@@ -128,7 +128,9 @@ title = "gitleaks config"
 	[rules.allowlist]
 		description = "ignore slack, mailchimp, aws"
 		regexes=[
-		    '''key'''
+		    '''key''',
+			'''accessorKey''',
+			'''ToastKey'''
 			]
 
 [[rules]]
@@ -187,7 +189,8 @@ title = "gitleaks config"
 				'''admin''',
 				'''jane_doe''',
 				'''measure-1''',
-				'''getMeasureReview'''
+				'''getMeasureReview''',
+				'''userId'''
 			]
 
 [[rules]]
