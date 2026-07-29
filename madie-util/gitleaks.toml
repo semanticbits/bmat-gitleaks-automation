@@ -190,7 +190,10 @@ title = "gitleaks config"
 				'''jane_doe''',
 				'''measure-1''',
 				'''getMeasureReview''',
-				'''userId'''
+				'''userId''',
+				'''accessorKey''',
+				'''toastKey''',
+				'''userStatus'''
 			]
 
 [[rules]]
