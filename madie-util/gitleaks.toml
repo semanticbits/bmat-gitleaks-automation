@@ -199,7 +199,8 @@ title = "gitleaks config"
 				'''accessorKey''',
 				'''toastKey''',
 				'''userStatus''',
-				'''testuser'''
+				'''testuser''',
+				'''Users'''
 			]
 
 [[rules]]
