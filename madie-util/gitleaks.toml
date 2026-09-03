@@ -200,7 +200,8 @@ title = "gitleaks config"
 				'''toastKey''',
 				'''userStatus''',
 				'''testuser''',
-				'''Users'''
+				'''Users''',
+				'''test'''
 			]
 
 [[rules]]
