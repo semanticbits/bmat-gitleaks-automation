@@ -201,7 +201,10 @@ title = "gitleaks config"
 				'''userStatus''',
 				'''testuser''',
 				'''Users''',
-				'''test'''
+				'''test''',
+				'''shared-user''',
+				'''unrelated-user''',
+				'''reviewer-user'''
 			]
 
 [[rules]]
